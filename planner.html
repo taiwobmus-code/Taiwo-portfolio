@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Planner | Taiwo Badmus</title>
+<meta name="description" content="Portfolio of Taiwo Badmus, a software engineer studying at MIVA Open University. Responsive websites, projects and an academic planner.">
+<meta name="theme-color" content="#060a12"><link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('tb-theme-v3')||'dark'}catch(e){document.documentElement.dataset.theme='dark'}</script>
+<link rel="stylesheet" href="css/style.css"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="index.html"><b>TB</b>Taiwo Badmus</a><nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li><li><a href="planner.html" class=active aria-current=page>Planner</a></li><li><a href="contact.html">Contact</a></li></ul></nav><button class="icon-btn" id="themeBtn" type="button" aria-label="Switch to dark mode"></button><button class="icon-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button></header>
+<main id="main">
+<h1 class="ph">Academic planner</h1>
+<p class="sub">Keep every course, deadline and priority in one place. Tasks save automatically in this browser.</p>
+<div class="stats" aria-label="Summary"><div class="stat s1"><b id="sOpen">0</b><span>Open tasks</span></div><div class="stat s2"><b id="sToday">0</b><span>Due today</span></div><div class="stat s3"><b id="sLate">0</b><span>Overdue</span></div><div class="stat s4"><b id="sDone">0</b><span>Completed</span></div></div>
+<div class="planner">
+<div>
+<form class="add box" id="taskForm" novalidate>
+<div class="r1"><input type="text" id="text" name="text" placeholder="What do you need to do?" aria-label="Task" autocomplete="off"><button class="btn" type="submit">Add task</button></div>
+<div class="r2"><input name="course" list="courses" placeholder="Course (optional)" aria-label="Course" autocomplete="off"><input type="date" name="due" aria-label="Due date"><select name="pri" aria-label="Priority"><option value="1">High priority</option><option value="2" selected>Medium priority</option><option value="3">Low priority</option></select></div>
+<div class="quick"><span>Due:</span><button type="button" class="btn alt sm" data-d="0">Today</button><button type="button" class="btn alt sm" data-d="1">Tomorrow</button><button type="button" class="btn alt sm" data-d="7">Next week</button></div>
+<datalist id="courses"></datalist>
+</form>
+<div class="toolbar"><div class="filters" role="group" aria-label="Filter tasks"><button class="btn alt sm on" data-f="all">All</button><button class="btn alt sm" data-f="active">Active</button><button class="btn alt sm" data-f="done">Done</button></div><input type="search" id="q" placeholder="Search tasks" aria-label="Search tasks"></div>
+<progress id="bar" max="100" value="0" aria-label="Completion"></progress><p id="count" role="status">0 of 0 tasks completed</p>
+<div id="tasks"></div><p class="empty" id="empty">No tasks yet. Add your first one above.</p>
+<div class="row tools-row"><button class="btn alt sm" id="clearDone">Clear completed</button><button class="btn alt sm" id="exportBtn">Export tasks</button></div>
+</div>
+<aside class="pl-side">
+<section class="box clock" aria-label="Current time"><p id="greet"></p><output id="clock" aria-live="off"><span id="hm"></span><span class="sec" id="sec"></span></output><p id="cdate"></p></section>
+<section class="box" aria-labelledby="nh"><h2 id="nh">Up next</h2><ol class="next" id="next"></ol></section>
+</aside>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+</main>
+<footer><div class="foot"><div><strong>Taiwo Badmus</strong><p>Software engineer building clear, fast and accessible web experiences.</p></div><div><h4>Pages</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="planner.html">Planner</a></div><div><h4>Get in touch</h4><a href="contact.html">Contact form</a><a href="mailto:t.badmus1403@miva.edu.ng">t.badmus1403@miva.edu.ng</a><a href="resume.html">View CV</a></div></div><p class="copy">&copy; 2026 Taiwo Badmus</p></footer>
+<script src="js/main.js"></script><script src="js/planner.js"></script></body></html>
